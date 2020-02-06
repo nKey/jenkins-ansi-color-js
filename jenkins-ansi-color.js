@@ -41,6 +41,8 @@ DOMReady(function() {
                 colorizeFn = function() {
                     $console.innerHTML = decodeHTMLEntities(ansiUp.ansi_to_html($console.innerHTML));
                 };
+            ansiUp.ansi_colors[0][7].rgb = ansiUp.ansi_colors[0][0].rgb;
+            ansiUp.ansi_colors[1][7].rgb = ansiUp.ansi_colors[1][0].rgb;
 
             colorizeFn();
             // create prototype.js global ajax handle responder
